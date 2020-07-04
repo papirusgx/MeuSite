@@ -1,0 +1,201 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  img{ 
+   margin:30px auto ;
+   width:60px ;
+   height:60px  ;
+}
+
+
+  /* Style the header */
+  header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    display: flex;
+    
+  }
+
+
+
+  .logo{
+    font-size: 25px;
+  font-weight: bold;
+  padding: 20px 10px;
+  float: left;
+  }
+
+/* Style the top navigation bar */
+nav {
+    position: fixed;
+ width:  100%;
+top: 0;
+    background-color: #333;   
+    
+                                          
+  }
+  
+  /* Style the topnav links */
+  nav a {
+ 
+    float: right ;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding:24px  30px;
+    text-decoration: none;              
+      
+  }
+  
+  /* Change color on hover */
+  nav a:hover {
+    background-color: #ddd;
+    color: black;
+    
+  }
+
+
+
+
+  h1,h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 60px 0;
+}
+
+p {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 200%;
+    margin: 0;
+    padding: 0;
+}
+   
+
+
+ /* The icon container */
+
+ .icon-bar {
+    position: fixed;
+    top: 68%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }
+
+
+
+
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left middle middle middle middle right' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+    height: 1200px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the left column */
+  .left {
+    grid-area: left;
+  }
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+  }
+  
+  /* Style the footer */
+  footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
